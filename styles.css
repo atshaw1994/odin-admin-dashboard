@@ -108,20 +108,29 @@ body {
     vertical-align: middle;
 }
 
-.header-btn {
-    background-color: transparent;
-    border: 0px solid black;
-    border-radius: 100%;
-    width: 48px;
-    height: 48px;
-}
-
-.header-buttons {
+.header-btn-container {
     display: flex;
     align-items: center;
     gap: 4px;
     margin-left: auto;
     flex-shrink: 0;
+}
+
+.header-btn {
+    background-color: transparent;
+    border: 0px solid black;
+    border-radius: 100%;
+    color: rgb(128,128,128);
+    width: 48px;
+    height: 48px;
+}
+
+.header-btn:hover {
+    color: black;
+}
+
+.header-btn:active {
+    transform: translate(2px, 2px);
 }
 
 .profile-info {
