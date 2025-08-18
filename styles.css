@@ -17,6 +17,12 @@ body {
     box-shadow: 1px 6px 4px 0 rgba(0, 0, 0, 0.3);
     position: relative;
     box-sizing: border-box;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+.sidebar-links {
+    display: contents;
 }
 
 .logo-container {
@@ -41,16 +47,12 @@ body {
 .sidebar ul {
     list-style: none;
     padding: 0;
-    margin: 0 24px;
+    margin: 0 24px 0 24px;
     font-size: 24px;
 }
 
 .sidebar ul li {
     padding: 10px 20px;
-}
-
-.li-seperator {
-    margin: 24px 0;
 }
 
 .sidebar ul li a{
@@ -69,7 +71,72 @@ body {
 
 .header {
     background-color: white;
-    padding: 10px 20px;
-    text-align: center;
+    padding: 24px 48px;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
+
+.searchbar {
+    border-radius: 32px;
+    background-color: #dfe5ee;
+    border: 2px solid #dfe5ee;
+    height: 24px;
+    min-width: 30vw;
+    padding: 0 12px;
+    font-size: 16px;
+    outline: none;
+    margin-left: 0;
+    transition: background-color 0.15s ease, border-color 0.15s ease;
+    flex: 1;
+    width: auto;
+}
+
+.searchbar:hover {
+    background-color: #EEF1F6;
+    border-color: #EEF1F6;
+}
+
+.searchbar:focus {
+    background-color: #EEF1F6;
+    border-color: #dfe5ee;
+}
+
+.header .material-icons {
+    font-size: 28px;
+    vertical-align: middle;
+}
+
+.header-btn {
+    background-color: transparent;
+    border: 0px solid black;
+    border-radius: 100%;
+    width: 48px;
+    height: 48px;
+}
+
+.profile-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: auto;
+    flex-shrink: 0;
+}
+
+.profile-pic {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px outset rgba(0, 0, 0, 0.3);
+    box-shadow: 2px 2px 4px 2px #dfe5ee;
+}
+
+.account-name {
+    font-size: 24px;
+    color: #333;
+    font-weight: 500;
+    margin-left: 4px;
+}
+
