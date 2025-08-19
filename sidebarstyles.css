@@ -1,0 +1,44 @@
+.sidebar-links {
+    display: contents;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 12px 12px 48px 12px;
+    text-align: center;
+}
+
+.logo-container img {
+    scale: 0.8;
+    margin: 16px 0 16px 16px;
+}
+
+.logo-container h1, .logo-container h2 {
+    align-self: left;
+    color: white;
+    margin: 0 0 0 16px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 24px 0 24px;
+    font-size: 24px;
+}
+
+.sidebar ul li {
+    padding: 10px 20px;
+}
+
+.sidebar ul li a{
+    color: rgba(255,255,255, 0.6);
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: color 0.15s ease;
+}
+
+.sidebar ul li a:hover {
+    color: white;
+}

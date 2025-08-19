@@ -1,0 +1,52 @@
+#projects-section {
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+#projects-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 16px;
+    padding: 16px;
+}
+
+.project-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 24px;
+    border-left: 6px solid #0b87cf;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-content h4 {
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+.project-content p {
+    font-size: 0.875rem;
+    color: #666;
+    margin-top: 8px;
+}
+
+.project-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.project-btn {
+    cursor: pointer;
+    color: #333;
+    font-size: 1.5rem;
+    transition: color 0.15s ease;
+}
+
+.project-btn:hover {
+    color: #0b87cf;
+}
