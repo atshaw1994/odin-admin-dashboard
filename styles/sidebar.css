@@ -1,3 +1,25 @@
+
+.sidebar {
+    display: grid;
+    flex: 0 0 25%;
+    width: 128px;
+    min-width: 128px;
+    max-width: 128px;
+    height: 100vh;
+    background-color: #0b87cf;
+    color: #fff;
+    box-shadow: 1px 6px 4px 0 rgba(0, 0, 0, 0.3);
+    position: relative;
+    box-sizing: border-box;
+    grid-template-rows: auto 1fr auto;
+    transition: width 0.3s, max-width 0.3s;
+}
+
+.sidebar:hover {
+    width: 300px;
+    max-width: 300px;
+}
+
 .sidebar-links {
     display: contents;
 }
@@ -19,7 +41,13 @@
     align-self: left;
     color: white;
     margin: 0 0 0 16px;
+    opacity: 0;
+    transition: opacity 0.3s;
 }
+
+.sidebar:hover .logo-container h1, .sidebar:hover .logo-container h2 {
+    opacity: 1;
+}   
 
 .sidebar ul {
     list-style: none;
@@ -32,13 +60,35 @@
     padding: 10px 20px;
 }
 
-.sidebar ul li a{
-    color: rgba(255,255,255, 0.6);
-    text-transform: uppercase;
+.sidebar ul li a {
+    opacity: 0;
+    width: 0;
+    transition: opacity 0.3s, width 0.3s;
+    overflow: hidden;
+    white-space: nowrap;
+    color: rgba(255, 255, 255, 0.5);
     text-decoration: none;
-    transition: color 0.15s ease;
+    transition: opacity 0.15s, color 0.3s;
+}
+
+.sidebar:hover ul li a {
+    opacity: 1;
+    width: auto;
+    color: rgba(255, 255, 255, 0.5);
 }
 
 .sidebar ul li a:hover {
     color: white;
+}
+
+#sidebar-expand-btn {
+    margin-left: 48px;
+    margin-bottom: 32px;
+    cursor: pointer;
+    transition: color 0.3s;
+    opacity: 0.5;
+}
+
+.sidebar:hover #sidebar-expand-btn{
+    opacity: 0;
 }
