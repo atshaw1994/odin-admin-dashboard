@@ -3,7 +3,8 @@ const new_btn = document.querySelector('#btn-new');
 const upload_btn = document.querySelector('#btn-upload');
 const share_btn = document.querySelector('#btn-share');
 const project_btns = document.querySelectorAll('.project-buttons');
-const visibilityIcons = document.querySelectorAll('.project-btn.material-icons-outlined:nth-child(2)');
+const visibility_btns = document.querySelectorAll('.project-btn.material-icons-outlined:nth-child(2)');
+const favorite_btns = document.querySelectorAll('.project-btn.material-icons-outlined:nth-child(1)');
 
 let notificationsOn = true;
 
@@ -16,8 +17,7 @@ notificationBtn.addEventListener('click', () => {
     }
 });
 
-visibilityIcons.forEach(icon => {
-    // Initialize unread state
+visibility_btns.forEach(icon => {
     icon.addEventListener('click', () => {
         const card = icon.closest('.project-card');
         // Toggle unread state
@@ -27,6 +27,22 @@ visibilityIcons.forEach(icon => {
         }
         else {
             card.classList.remove("project-card-unread");
+        }
+    });
+});
+
+favorite_btns.forEach(icon => {
+    icon.addEventListener('click', () => {
+        const card = icon.closest('.project-card');
+        // Toggle isFavorite state
+        card.dataset.isFavorite = card.dataset.isFavorite === "true" ? "false" : "true";
+        if (card.dataset.isFavorite == "true") {
+            card.classList.add("project-card-favorite");
+            icon.style.color = "#ffcc00"
+        }
+        else {
+            card.classList.remove("project-card-favorite");
+            icon.style.color = "black"
         }
     });
 });
