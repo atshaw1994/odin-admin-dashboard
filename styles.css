@@ -56,26 +56,34 @@ body {
 }
 
 .sidebar ul li a{
-    color: white;
+    color: rgba(255,255,255, 0.6);
     text-transform: uppercase;
     text-decoration: none;
+    transition: color 0.15s ease;
+}
+
+.sidebar ul li a:hover {
+    color: white;
 }
 
 .main-content {
+    display: flex;
     flex: 1 0 75%;
+    flex-direction: column;
+    min-height: 100vh;
     margin-left: 0;
     box-sizing: border-box;
-    flex-direction: column;
     background-color: #dfe5ee;
 }
 
-.header {
+.header-container {
     background-color: white;
     padding: 24px 48px;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
     display: flex;
     align-items: center;
     gap: 12px;
+    flex-shrink: 0
 }
 
 .searchbar {
@@ -103,7 +111,7 @@ body {
     border-color: #dfe5ee;
 }
 
-.header .material-icons {
+.header-container .material-icons {
     font-size: 28px;
     vertical-align: middle;
 }
@@ -157,3 +165,19 @@ body {
     margin-left: 4px;
 }
 
+.content-container {
+    display: grid;
+    height: 100%;
+    grid-template: 1fr 1fr / 2fr 1fr;
+}
+
+.content-section {
+    font-size: 1rem;
+    padding: 24px;
+}
+
+.content-section label {
+    color: rgba(0, 0, 0, 0.8);
+    font-weight: bold;
+    margin-left: 16px;
+}
