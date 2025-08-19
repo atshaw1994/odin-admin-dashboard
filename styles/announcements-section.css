@@ -11,6 +11,7 @@
     border-radius: 8px;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
     padding: 16px;
+    cursor: pointer;
 }
 
 .announcement-card h5 {
