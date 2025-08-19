@@ -5,7 +5,8 @@ const share_btn = document.querySelector('#btn-share');
 const project_btns = document.querySelectorAll('.project-buttons');
 const visibility_btns = document.querySelectorAll('.project-btn.material-icons-outlined:nth-child(2)');
 const favorite_btns = document.querySelectorAll('.project-btn.material-icons-outlined:nth-child(1)');
-const announcements = document.querySelectorAll('.announcement-card');
+const announcement_cards = document.querySelectorAll('.announcement-card');
+const project_cards = document.querySelectorAll('.project-card');
 
 let notificationsOn = true;
 
@@ -48,14 +49,20 @@ favorite_btns.forEach(icon => {
     });
 });
 
-announcements.forEach(card => {
-    card.addEventListener('click', () => {
-        card.dataset.unread = card.dataset.unread === "true" ? "false" : "true";
-        if (card.dataset.unread == "true") {
-            card.classList.add("announcement-card-unread");
+project_cards.forEach(card => {
+    card.addEventListener('click', (e) => {
+        if (!e.target.closest('.project-btn') && card.dataset.unread == "true") {
+            card.classList.remove("project-card-unread");
+            card.dataset.unread = "false";
         }
-        else {
+    });
+});
+
+announcement_cards.forEach(card => {
+    card.addEventListener('click', () => {
+        if (card.dataset.unread == "true") {
             card.classList.remove("announcement-card-unread");
+            card.dataset.unread = "false";
         }
     });
 });
