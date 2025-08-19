@@ -4,7 +4,7 @@ This project is a clean and responsive admin dashboard template. The layout is b
 
 ## Live Preview
 
-You can view a live preview of the site [here](atshaw1994.github.io/odin-admin-dashboard)
+You can view a live preview of the site [here](https://atshaw1994.github.io/odin-admin-dashboard/)
 
 ## Screenshot
 
