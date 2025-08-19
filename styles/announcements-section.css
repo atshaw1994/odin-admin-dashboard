@@ -7,7 +7,7 @@
 
 .announcement-card {
     background-color: white;
-    border-left: 6px solid #0b87cf;
+    border-left: 6px solid white;
     border-radius: 8px;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
     padding: 16px;
@@ -23,4 +23,9 @@
     font-size: 0.75rem;
     color: #666;
     margin-top: 8px;
+}
+
+.announcement-card-unread {
+    border-left-color: #0b87cf;
+    background-color: #f0f8ff;
 }

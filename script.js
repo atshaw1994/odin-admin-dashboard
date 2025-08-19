@@ -5,6 +5,7 @@ const share_btn = document.querySelector('#btn-share');
 const project_btns = document.querySelectorAll('.project-buttons');
 const visibility_btns = document.querySelectorAll('.project-btn.material-icons-outlined:nth-child(2)');
 const favorite_btns = document.querySelectorAll('.project-btn.material-icons-outlined:nth-child(1)');
+const announcements = document.querySelectorAll('.announcement-card');
 
 let notificationsOn = true;
 
@@ -43,6 +44,18 @@ favorite_btns.forEach(icon => {
         else {
             card.classList.remove("project-card-favorite");
             icon.style.color = "black"
+        }
+    });
+});
+
+announcements.forEach(card => {
+    card.addEventListener('click', () => {
+        card.dataset.unread = card.dataset.unread === "true" ? "false" : "true";
+        if (card.dataset.unread == "true") {
+            card.classList.add("announcement-card-unread");
+        }
+        else {
+            card.classList.remove("announcement-card-unread");
         }
     });
 });
