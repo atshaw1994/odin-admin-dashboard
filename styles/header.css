@@ -1,3 +1,13 @@
+/* Fade out placeholder text on focus */
+.searchbar::placeholder {
+    color: #888;
+    opacity: 1;
+    transition: opacity 0.2s;
+}
+
+.searchbar:focus::placeholder {
+    opacity: 0;
+}
 .header-container {
     background-color: white;
     padding: 24px 48px;
@@ -8,13 +18,34 @@
     flex-shrink: 0;
 }
 
+.searchbar-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+.searchbar-icon {
+    position: absolute;
+    left: 12px;
+    color: #888;
+    font-size: 24px;
+    pointer-events: none;
+    transition: opacity 0.2s;
+}
+
+.searchbar:focus ~ .searchbar-icon {
+    pointer-events: none;
+}
+
 .searchbar {
     border-radius: 32px;
     background-color: #dfe5ee;
     border: 2px solid #dfe5ee;
     height: 24px;
     min-width: 30vw;
-    padding: 0 12px;
+    padding: 0 0 0 40px;
     font-size: 16px;
     outline: none;
     margin-left: 0;
