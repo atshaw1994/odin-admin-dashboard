@@ -63,3 +63,10 @@
     border-left: 6px solid #ffcc00;
     background-color: #fff8e1;
 }
+
+#no-projects-message{
+    display: none;
+    font-style: italic;
+    font-size: 0.875rem;
+    color: #888;
+}

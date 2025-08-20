@@ -8,6 +8,8 @@ const favorite_btns = document.querySelectorAll('.project-btn.material-icons-out
 const announcement_cards = document.querySelectorAll('.announcement-card');
 const project_cards = document.querySelectorAll('.project-card');
 const searchbar = document.querySelector('#searchbar');
+const searchbar_clear_icon = document.querySelector('.searchbar-clear');
+const msg_no_projects = document.querySelector('#no-projects-message');
 
 let notificationsOn = true;
 
@@ -68,14 +70,32 @@ announcement_cards.forEach(card => {
     });
 });
 
+function toggleClearIcon() {
+    if (searchbar.value.length > 0) {
+        searchbar_clear_icon.classList.add('visible');
+    } else {
+        searchbar_clear_icon.classList.remove('visible');
+    }
+}
+
 searchbar.addEventListener('input', () => {
     const searchTerm = searchbar.value.toLowerCase();
+    toggleClearIcon();
     project_cards.forEach(card => {
-        const title = card.querySelector('.project-content').textContent.toLowerCase();
-        if (title.includes(searchTerm)) {
+        const card_content = card.querySelector('.project-content').textContent.toLowerCase();
+        if (card_content.includes(searchTerm)) {
             card.style.display = '';
+            msg_no_projects.style.display = 'none';
         } else {
             card.style.display = 'none';
+            msg_no_projects.style.display = 'block';
         }
     });
+});
+
+searchbar_clear_icon.addEventListener('click', () => {
+    searchbar.value = '';
+    toggleClearIcon();
+    searchbar.focus();
+    searchbar.dispatchEvent(new Event('input'));
 });

@@ -1,4 +1,3 @@
-/* Fade out placeholder text on focus */
 .searchbar::placeholder {
     color: #888;
     opacity: 1;
@@ -23,12 +22,27 @@
     display: flex;
     align-items: center;
     width: 100%;
-    max-width: 400px;
+    min-width: 200px;
+}
+
+.searchbar {
+    border-radius: 32px;
+    background-color: #dfe5ee;
+    border: 2px solid #dfe5ee;
+    height: 24px;
+    min-width: 30vw;
+    padding: 0 40px 0 40px;
+    font-size: 16px;
+    outline: none;
+    margin-left: 0;
+    transition: background-color 0.15s ease, border-color 0.15s ease;
+    flex: 1 1 0;
+    width: 100%;
 }
 
 .searchbar-icon {
     position: absolute;
-    left: 12px;
+    left: 4px;
     color: #888;
     font-size: 24px;
     pointer-events: none;
@@ -39,19 +53,25 @@
     pointer-events: none;
 }
 
-.searchbar {
-    border-radius: 32px;
-    background-color: #dfe5ee;
-    border: 2px solid #dfe5ee;
-    height: 24px;
-    min-width: 30vw;
-    padding: 0 0 0 40px;
-    font-size: 16px;
-    outline: none;
-    margin-left: 0;
-    transition: background-color 0.15s ease, border-color 0.15s ease;
-    flex: 1;
-    width: auto;
+.searchbar-clear {
+    opacity: 0;
+    position: absolute;
+    display: none;
+    right: 4px;
+    scale: 0.8;
+    color: #888;
+    cursor: pointer;
+    transition: opacity 0.2s;
+    pointer-events: none;
+}
+
+.searchbar-clear.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.searchbar-clear:hover {
+    color: black;
 }
 
 .searchbar:hover {

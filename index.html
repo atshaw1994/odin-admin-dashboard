@@ -42,6 +42,7 @@
             <div class="searchbar-wrapper">
                 <input type="text" id="searchbar" class="searchbar" placeholder="Search...">
                 <span class="material-icons searchbar-icon">search</span>
+                <span class="material-icons searchbar-clear">clear</span>
             </div>
             <div class="header-btn-container">
                 <button id="btn-new" class="header-btn">
@@ -66,6 +67,7 @@
         <div class="content-container">
             <div id="projects-section" class="content-section">
                 <label for="projects-content">Your Projects</label>
+                <label id="no-projects-message" for="projects-content">No projects found.</label>
                 <div id="projects-content">
                     <div class="project-card project-card-favorite" data-isFavorite="true" data-unread="false">
                         <div class="project-content">
