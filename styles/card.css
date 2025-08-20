@@ -1,0 +1,49 @@
+.card {
+    background-color: white;
+    border-left: 6px solid white;
+    border-radius: 8px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    cursor: pointer;
+}
+
+.card-unread {
+    border-left: 6px solid #0b87cf;
+    background-color: #f0f8ff;
+}
+
+.card-favorite {
+    border-left: 6px solid #ffcc00;
+    background-color: #fff8e1;
+}
+
+.card-content h4 {
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+.card-content p {
+    font-size: 0.875rem;
+    color: #666;
+    margin-top: 8px;
+}
+
+.card-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.card-btn {
+    cursor: pointer;
+    background: none;
+    color: #333;
+    border: none;
+    font-size: 1.5rem;
+    transition: color 0.15s ease;
+}
+
+.card-btn:hover {
+    color: #0b87cf;
+}

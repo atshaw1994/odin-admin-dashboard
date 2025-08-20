@@ -1,3 +1,11 @@
+.card {
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 24px;
+    display: flex;
+    cursor: pointer;
+}
+
 #projects-section {
     grid-row-start: 1;
     grid-row-end: 3;
@@ -9,33 +17,4 @@
     grid-template-rows: repeat(3, 1fr);
     gap: 16px;
     padding: 16px;
-}
-
-.project-card {
-    background-color: white;
-    border-left: 6px solid white;
-    border-radius: 8px;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-    padding: 24px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    cursor: pointer;
-}
-
-.project-card-unread {
-    border-left: 6px solid #0b87cf;
-    background-color: #f0f8ff;
-}
-
-.project-card-favorite {
-    border-left: 6px solid #ffcc00;
-    background-color: #fff8e1;
-}
-
-#no-projects-message{
-    opacity: 0;
-    font-style: italic;
-    font-size: 0.875rem;
-    color: #888;
 }

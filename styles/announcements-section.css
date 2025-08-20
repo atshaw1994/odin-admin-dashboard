@@ -1,3 +1,7 @@
+.card-content p {
+    font-size: 0.75rem;
+}
+
 #announcements-content {
     display: grid;
     grid-template-rows: repeat(3, 1fr);
@@ -5,35 +9,8 @@
     padding: 16px;
 }
 
-.announcement-card {
-    background-color: white;
-    border-left: 6px solid white;
-    border-radius: 8px;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-    padding: 16px;
-    cursor: pointer;
-}
-
-.announcement-card h5 {
+.card h5 {
     margin: 0;
     font-size: 1rem;
     color: #333;
-}
-
-.announcement-card p {
-    font-size: 0.75rem;
-    color: #666;
-    margin-top: 8px;
-}
-
-.announcement-card-unread {
-    border-left-color: #0b87cf;
-    background-color: #f0f8ff;
-}
-
-#no-announcements-message{
-    opacity: 0;
-    font-style: italic;
-    font-size: 0.875rem;
-    color: #888;
 }
