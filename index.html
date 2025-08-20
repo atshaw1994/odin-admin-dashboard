@@ -70,69 +70,69 @@
                 <label id="no-projects-message" for="projects-content">No projects found.</label>
                 <div id="projects-content">
                     <div class="project-card project-card-favorite" data-isFavorite="true" data-unread="false">
-                        <div class="project-content">
+                        <div class="card-content">
                             <h4>Super Cool Project</h4>
                             <p>This project is super cool! It deals with some super cool things. Things that are super but are also things that are cool.</p>
                         </div>
-                        <div class="project-buttons">
-                            <span class="material-icons-outlined project-btn">star</span>
-                            <span class="material-icons-outlined project-btn">visibility</span>
-                            <span class="material-icons-outlined project-btn">share</span>
+                        <div class="card-buttons">
+                            <span class="material-icons-outlined card-btn">star</span>
+                            <span class="material-icons-outlined card-btn">visibility</span>
+                            <span class="material-icons-outlined card-btn">share</span>
                         </div>
                     </div>
                     <div class="project-card project-card-unread" data-isFavorite="false" data-unread="true">
-                        <div class="project-content">
+                        <div class="card-content">
                             <h4>Less Cool Project</h4>
                             <p>This project is less cool. It deals with some less cool things. Things that are somewhat cool.</p>
                         </div>
-                        <div class="project-buttons">
-                            <span class="material-icons-outlined project-btn">star</span>
-                            <span class="material-icons-outlined project-btn">visibility</span>
-                            <span class="material-icons-outlined project-btn">share</span>
+                        <div class="card-buttons">
+                            <span class="material-icons-outlined card-btn">star</span>
+                            <span class="material-icons-outlined card-btn">visibility</span>
+                            <span class="material-icons-outlined card-btn">share</span>
                         </div>
                     </div>
                     <div class="project-card" data-isFavorite="false" data-unread="false">
-                        <div class="project-content">
+                        <div class="card-content">
                             <h4>Impossible App</h4>
                             <p>This app is impossible. Don't even try to use it. It is not possible. But it <em>is</em> an app.</p>
                         </div>
-                        <div class="project-buttons">
-                            <span class="material-icons-outlined project-btn">star</span>
-                            <span class="material-icons-outlined project-btn">visibility</span>
-                            <span class="material-icons-outlined project-btn">share</span>
+                        <div class="card-buttons">
+                            <span class="material-icons-outlined card-btn">star</span>
+                            <span class="material-icons-outlined card-btn">visibility</span>
+                            <span class="material-icons-outlined card-btn">share</span>
                         </div>
                     </div>
                     <div class="project-card" data-isFavorite="false" data-unread="false">
-                        <div class="project-content">
+                        <div class="card-content">
                             <h4>Easy Peasy App</h4>
                             <p>This app is easy peasy! It is very possible. Most importantly, it is an app.</p>
                         </div>
-                        <div class="project-buttons">
-                            <span class="material-icons-outlined project-btn">star</span>
-                            <span class="material-icons-outlined project-btn">visibility</span>
-                            <span class="material-icons-outlined project-btn">share</span>
+                        <div class="card-buttons">
+                            <span class="material-icons-outlined card-btn">star</span>
+                            <span class="material-icons-outlined card-btn">visibility</span>
+                            <span class="material-icons-outlined card-btn">share</span>
                         </div>
                     </div>
                     <div class="project-card" data-isFavorite="false" data-unread="false">
-                        <div class="project-content">
+                        <div class="card-content">
                             <h4>Ad Blocker</h4>
                             <p>This is an ad blocker. It blocks ads.</p>
                         </div>
-                        <div class="project-buttons">
-                            <span class="material-icons-outlined project-btn">star</span>
-                            <span class="material-icons-outlined project-btn">visibility</span>
-                            <span class="material-icons-outlined project-btn">share</span>
+                        <div class="card-buttons">
+                            <span class="material-icons-outlined card-btn">star</span>
+                            <span class="material-icons-outlined card-btn">visibility</span>
+                            <span class="material-icons-outlined card-btn">share</span>
                         </div>
                     </div>
                     <div class="project-card" data-isFavorite="false" data-unread="false">
-                        <div class="project-content">
+                        <div class="card-content">
                             <h4>Money Maker</h4>
                             <p>Cha-ching! Julio, get the stretch! This app will let allow us to retire!</p>
                         </div>
-                        <div class="project-buttons">
-                            <span class="material-icons-outlined project-btn">star</span>
-                            <span class="material-icons-outlined project-btn">visibility</span>
-                            <span class="material-icons-outlined project-btn">share</span>
+                        <div class="card-buttons">
+                            <span class="material-icons-outlined card-btn">star</span>
+                            <span class="material-icons-outlined card-btn">visibility</span>
+                            <span class="material-icons-outlined card-btn">share</span>
                         </div>
                     </div>
                 </div>
@@ -140,18 +140,28 @@
             <div class="right-column">
                 <div id="announcements-section" class="content-section">
                     <label for="announcements-content">Announcements</label>
+                    <label id="no-announcements-message" for="announcements-content">No announcements found.</label>
                     <div id="announcements-content">
                         <div class="announcement-card announcement-card-unread" data-unread="true">
-                            <h5>Site Maintenance</h5>
-                            <p>Our site is scheduled for maintenance on Sunday, May 22nd from 2:00 AM to 4:00 AM EST. During this time...</p>
+                            <div class="card-content">
+                                <h5>Site Maintenance</h5>
+                                <p>Our site is scheduled for maintenance on Sunday, May 22nd from 2:00 AM to 4:00 AM EST. During this time...</p>
+                            </div>
+                            <div class="card-buttons"></div>
                         </div>
                         <div class="announcement-card" data-unread="false">
-                            <h5>Community Share Day</h5>
-                            <p>Our annual community share day is Thursday, May 12th from 8:00 AM to 5:00 PM EST. Bring the kids!</p>
+                            <div class="card-content">
+                                <h5>Community Share Day</h5>
+                                <p>Our annual community share day is Thursday, May 12th from 8:00 AM to 5:00 PM EST. Bring the kids!</p>
+                            </div>
+                            <div class="card-buttons"></div>
                         </div>
                         <div class="announcement-card" data-unread="false">
-                            <h5>Updated Privacy Policy</h5>
-                            <p>Our Privacy Policy has been updated. You have no privacy. You belong the company. Sacrifice, player.</p>
+                            <div class="card-content">
+                                <h5>Updated Privacy Policy</h5>
+                                <p>Our Privacy Policy has been updated. You have no privacy. You belong the company. Sacrifice, player.</p>
+                            </div>
+                            <div class="card-buttons"></div>
                         </div>
                     </div>
                 </div>

@@ -23,37 +23,6 @@
     cursor: pointer;
 }
 
-.project-content h4 {
-    margin: 0;
-    font-size: 1.25rem;
-}
-
-.project-content p {
-    font-size: 0.875rem;
-    color: #666;
-    margin-top: 8px;
-}
-
-.project-buttons {
-    display: flex;
-    justify-content: flex-end;
-    gap: 16px;
-    margin-top: 16px;
-}
-
-.project-btn {
-    cursor: pointer;
-    background: none;
-    color: #333;
-    border: none;
-    font-size: 1.5rem;
-    transition: color 0.15s ease;
-}
-
-.project-btn:hover {
-    color: #0b87cf;
-}
-
 .project-card-unread {
     border-left: 6px solid #0b87cf;
     background-color: #f0f8ff;
@@ -65,7 +34,7 @@
 }
 
 #no-projects-message{
-    display: none;
+    opacity: 0;
     font-style: italic;
     font-size: 0.875rem;
     color: #888;
