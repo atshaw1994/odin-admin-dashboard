@@ -1,14 +1,5 @@
-.searchbar::placeholder {
-    color: #888;
-    opacity: 1;
-    transition: opacity 0.2s;
-}
-
-.searchbar:focus::placeholder {
-    opacity: 0;
-}
 .header-container {
-    background-color: white;
+    background-color: var(--header-bg);
     padding: 24px 48px;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
     display: flex;
@@ -27,8 +18,8 @@
 
 .searchbar {
     border-radius: 32px;
-    background-color: #dfe5ee;
-    border: 2px solid #dfe5ee;
+    background-color: var(--searchbar-bg);
+    border: 2px solid var(--searchbar-border);
     height: 24px;
     min-width: 30vw;
     padding: 0 40px 0 40px;
@@ -38,6 +29,16 @@
     transition: background-color 0.15s ease, border-color 0.15s ease;
     flex: 1 1 0;
     width: 100%;
+}
+
+.searchbar::placeholder {
+    color: #888;
+    opacity: 1;
+    transition: opacity 0.2s;
+}
+
+.searchbar:focus::placeholder {
+    opacity: 0;
 }
 
 .searchbar-icon {
@@ -101,13 +102,13 @@
     background-color: transparent;
     border: 0px solid black;
     border-radius: 100%;
-    color: rgb(128,128,128);
+    color: var(--header-btn-fg);
     width: 48px;
     height: 48px;
 }
 
 .header-btn:hover {
-    color: black;
+    color: var(--header-btn-fg-hover);
 }
 
 .profile-info {
