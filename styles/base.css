@@ -19,6 +19,7 @@
   --card-favorite-border: #ffd700;
   --card-unread-bg: #f0f8ff;
   --card-unread-border: #0b87cf;
+  --card-btn-hover-fg: #0b87cf;
 }
 
 body.dark-mode {
@@ -44,6 +45,7 @@ body.dark-mode {
   --card-favorite-border: #ffcc00;
   --card-unread-bg: rgba(240, 248, 255, 0.6);
   --card-unread-border: rgba(11, 135, 207, 0.2);
+  --card-btn-hover-fg: rgba(255, 255, 255, 0.6);
 }
 
 body {
